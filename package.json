@@ -1,0 +1,28 @@
+{
+  "name": "christmas",
+  "version": "1.0.0",
+  "description": "christmas tree",
+  "main": "main.js",
+  "authors": "wuyunjiang",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "build": {
+    "appId": "christmas_1.0.0",
+    "win": {
+      "icon": "./logo.png",
+      "target": [
+        "portable"
+      ]
+    }
+  }
+}

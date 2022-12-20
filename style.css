@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Christmas";
+  src: url(./Christmas.ttf);
+}
+
+html,
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: #0c0f1a;
+}
+
+.webgl {
+  position: fixed;
+}
+.drap {
+  cursor: grab;
+  -webkit-app-region: drag;
+  width: 100vw;
+  height: 70vh;
+  margin-top: 10vh;
+  z-index: 99999;
+}
+
+button {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  appearance: none;
+  -webkit-appearance: none;
+  background: crimson;
+  color: white;
+  font-size: 1.3rem;
+  padding: 0.75rem 2.5rem;
+  border: none;
+  border-radius: 1.75rem;
+  cursor: pointer;
+  font-family: Christmas;
+  font-weight: 100;
+  letter-spacing: 0.2rem;
+  z-index: 99999;
+}
+
+h1 {
+  position: absolute;
+  color: white;
+  top: 3rem;
+  left: 3rem;
+  right: 3rem;
+  text-align: center;
+  /* font-size: 4vw; */
+  font-size: max(4vw, 2rem);
+  font-family: Christmas;
+  font-weight: 100;
+  letter-spacing: 0.2rem;
+}
+
+.close {
+  position: relative;
+  display: inline-block;
+  width: 5vh;
+  height: 5vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.close:hover::before,
+.close:hover::after {
+  background: #dc143c;
+}
+.close::before,
+.close::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: rgba(255, 255, 255, 0.6);
+}
+.close::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.close::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
